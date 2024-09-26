@@ -79,3 +79,7 @@ main {
 .temple-card {
     text-align: center;
 }
+
+.temple-image {
+    width: 100%
+}
