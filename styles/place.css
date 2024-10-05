@@ -51,6 +51,7 @@ main img {
 
 .column {
     flex: 50%;
+    text-wrap: nowrap;
 }
 
 footer {
