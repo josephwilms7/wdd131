@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Inter:700|Roboto:400');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    --text: #040316;
+    --background: #fbfbfe;
+    --primary: #2f27ce;
+    --secondary: #dddbff;
+    --accent: #443dff;
+    background-color: var(--background);
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    color: var(--text);
+}
+
+html {font-size: 100%;} /* 16px */
+
+h1 {font-size: 3rem; /* 67.36px */}
+
+h2 {font-size: 2.7rem; /* 50.56px */}
+
+h3 {font-size: 2.3rem; /* 37.92px */}
+
+h4 {font-size: 1.6rem; /* 28.48px */}
+
+h5 {font-size: 1.3rem; /* 21.28px */}
+
+small {font-size: 0.750rem; /* 12px */}
+
+p, span, li {
+    color: var(--text);
+}
+
+.primary {
+    color: var(--primary);
+}
+
+.accent {
+    color: var(--accent);
+}
