@@ -29,7 +29,6 @@ const products = [
 const productSelect = document.getElementById('productName');
 const ratingContainer = document.getElementById('rating');
 
-// Populate product options
 products.forEach(product => {
     const option = document.createElement('option');
     option.value = product.name;
@@ -37,7 +36,6 @@ products.forEach(product => {
     productSelect.appendChild(option);
 });
 
-// Populate rating options
 for (let i = 1; i <= 5; i++) {
     const label = document.createElement('label');
     label.innerHTML = `
@@ -55,3 +53,12 @@ year.innerHTML = today.getFullYear();
 const lastModified = document.getElementById("lastModified");
 
 lastModified.innerHTML = document.lastModified;
+
+document.addEventListener('DOMContentLoaded', () => {
+  let reviewCount = localStorage.getItem('reviewCount') || 0;
+  reviewCount++;
+  localStorage.setItem('reviewCount', reviewCount);
+  
+  const reviewCountDisplay = document.getElementById('reviewCount');
+  reviewCountDisplay.textContent = `You have completed ${reviewCount} reviews.`;
+});
