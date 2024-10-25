@@ -1,0 +1,224 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Roboto", sans-serif;
+}
+
+p, span {
+    font-family: "Roboto", sans-serif;
+}
+
+header {
+    background-color: #000000;
+    margin: 0;
+}
+
+header h1 {
+    color: white;
+    padding: 10px;
+}
+
+nav {
+	display: flex;
+	flex-direction: column;
+}
+
+nav a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 1rem 1.5rem;
+	text-decoration: none;
+}
+
+nav a:hover {
+	background-color: #eee;
+	color: #000;
+}
+
+footer {
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    color: white;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+main h1 {
+    margin-bottom: 10px;
+}
+
+main p {
+    margin-right: 0px;
+    margin-bottom: 20px;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    margin-bottom: 30px;
+}
+
+.twothird {
+    flex: 1;
+}
+
+.third {
+    flex: 1;
+}
+
+.responsive-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.weather {
+    background-color: #f0f8ff; /* Light background color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    padding: 20px; /* Padding around the content */
+    max-width: 900px; /* Maximum width */
+    margin: 20px auto; /* Centering the widget */
+    font-family: Arial, sans-serif; /* Clean font */
+}
+
+.weather h2 {
+    text-align: center; /* Centered heading */
+    color: #333; /* Darker text color */
+    margin-bottom: 15px; /* Space below the heading */
+}
+
+.weather-icon {
+    display: block; /* Centering the icon */
+    margin: 0 auto 15px; /* Centered margin */
+    width: 50px; /* Fixed width for the icon */
+}
+
+.row {
+    display: grid; /* Using grid for layout */
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 10px; /* Space between items */
+}
+
+#weather-data {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap onto the next line */
+    justify-content: center; /* Center items horizontally */
+    gap: 15px; /* Space between items */
+}
+
+.weather-day {
+    background-color: #ffffff; /* White background for each day */
+    border-radius: 8px; /* Rounded corners for each day */
+    padding: 10px; /* Padding within each day */
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); /* Light shadow */
+    transition: transform 0.2s; /* Smooth hover effect */
+    text-align: center; /* Centering text within each day */
+    flex: 1 1 100%;
+    flex: 1 1 calc(45% - 30px);
+}
+
+.weather-day .date {
+    font-weight: bold; /* Bold date */
+    font-size: 1.2em; /* Slightly larger font size */
+    margin-bottom: 10px; /* Space below the date */
+}
+
+.weather-day:hover {
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+.weather-day span {
+    display: block; /* Stack spans vertically */
+    color: #555; /* Softer text color */
+}
+
+#load-weather {
+    background-color: #007bff; /* Primary button color */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 10px 20px; /* Padding around button */
+    border-radius: 5px; /* Rounded button corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    display: block; /* Center the button */
+    margin: 20px auto 0; /* Margin for spacing */
+    transition: background-color 0.3s; /* Smooth color change */
+}
+
+#load-weather:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+#noteForm {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+#noteInput {
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none; /* Prevent resizing the textarea */
+}
+
+button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.note {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.delete-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

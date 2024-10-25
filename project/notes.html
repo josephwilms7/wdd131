@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>W3.CSS Template</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/style-large.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="scripts/project.js" defer></script>
+    <script src="scripts/note.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Joseph's Dashboard</h1>
+        <nav>
+            <a href="index.html" class="nav-link" data-filter="all">About Me</a>
+            <a href="tools.html" class="nav-link" data-filter="old">Tools</a>
+            <a href="notes.html" class="nav-link" data-filter="new">Notes</a>
+        </nav>        
+    </header>
+
+    <main>
+        <h2>Note Taking App</h2>
+        <form id="noteForm">
+            <textarea id="noteInput" placeholder="Write your note here..." required></textarea>
+            <button type="submit">Add Note</button>
+        </form>
+        <div id="notesContainer"></div>
+    </main>
+
+    <footer>
+        <p>&#169;<span id="currentyear"></span> Joseph Williams - Alberta Canada</p>
+        <p id="lastModified">test</p>
+    </footer>
+</body>
+</html>

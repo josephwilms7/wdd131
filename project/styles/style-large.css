@@ -1,0 +1,49 @@
+@media (min-width: 740px) {
+	header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	nav {
+		justify-content: flex-end;
+		flex-direction: row;
+	}
+	nav a {
+		flex: 1 1 100%;
+        min-width: 120px;
+        text-align: center;
+	}
+
+    main h1 {
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-bottom: 20px;
+    }
+
+    main p {
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-bottom: 0px;
+    }
+
+    .end {
+        text-align: right;
+    }
+
+    .row {
+        flex-direction: row;
+    }
+
+    .twothird {
+        flex: 2;
+    }
+
+    .third {
+        flex: 1;
+    }
+
+    .weather-day {
+        flex: 1 1 calc(45% - 30px);
+    }
+}
