@@ -4,9 +4,8 @@ const notesContainer = document.getElementById('notesContainer');
 
 let notes = JSON.parse(localStorage.getItem('notes')) || [];
 
-// Function to render notes
 function renderNotes() {
-    notesContainer.innerHTML = ''; // Clear current notes
+    notesContainer.innerHTML = '';
     notes.forEach((note, index) => {
         const noteDiv = document.createElement('div');
         noteDiv.className = 'note';
@@ -18,24 +17,21 @@ function renderNotes() {
     });
 }
 
-// Function to add a note
 function addNote(event) {
-    event.preventDefault(); // Prevent form submission
+    event.preventDefault();
     const noteText = noteInput.value;
     notes.push(noteText);
     localStorage.setItem('notes', JSON.stringify(notes));
-    noteInput.value = ''; // Clear the input
-    renderNotes(); // Update the displayed notes
+    noteInput.value = '';
+    renderNotes();
 }
 
-// Function to delete a note
 function deleteNote(index) {
     notes.splice(index, 1);
     localStorage.setItem('notes', JSON.stringify(notes));
-    renderNotes(); // Update the displayed notes
+    renderNotes();
 }
 
-// Event listeners
 noteForm.addEventListener('submit', addNote);
 notesContainer.addEventListener('click', (event) => {
     if (event.target.classList.contains('delete-btn')) {
@@ -44,8 +40,4 @@ notesContainer.addEventListener('click', (event) => {
     }
 });
 
-// Initial rendering of notes
 renderNotes();
-
-localStorage.setItem('test', 'Hello World');
-console.log(localStorage.getItem('test'));

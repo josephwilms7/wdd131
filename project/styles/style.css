@@ -99,80 +99,78 @@ main p {
 }
 
 .weather {
-    background-color: #f0f8ff; /* Light background color */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
-    padding: 20px; /* Padding around the content */
-    max-width: 900px; /* Maximum width */
-    margin: 20px auto; /* Centering the widget */
-    font-family: Arial, sans-serif; /* Clean font */
+    background-color: #f0f8ff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 900px;
+    margin: 20px auto;
 }
 
 .weather h2 {
-    text-align: center; /* Centered heading */
-    color: #333; /* Darker text color */
-    margin-bottom: 15px; /* Space below the heading */
+    text-align: center;
+    color: #333;
+    margin-bottom: 15px;
 }
 
 .weather-icon {
-    display: block; /* Centering the icon */
-    margin: 0 auto 15px; /* Centered margin */
-    width: 50px; /* Fixed width for the icon */
+    display: block;
+    margin: 0 auto 15px;
+    width: 50px;
 }
 
 .row {
-    display: grid; /* Using grid for layout */
-    grid-template-columns: repeat(2, 1fr); /* Two columns */
-    gap: 10px; /* Space between items */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
 }
 
 #weather-data {
     display: flex;
-    flex-wrap: wrap; /* Allow items to wrap onto the next line */
-    justify-content: center; /* Center items horizontally */
-    gap: 15px; /* Space between items */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
 }
 
 .weather-day {
-    background-color: #ffffff; /* White background for each day */
-    border-radius: 8px; /* Rounded corners for each day */
-    padding: 10px; /* Padding within each day */
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); /* Light shadow */
-    transition: transform 0.2s; /* Smooth hover effect */
-    text-align: center; /* Centering text within each day */
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    text-align: center;
     flex: 1 1 100%;
     flex: 1 1 calc(45% - 30px);
 }
 
 .weather-day .date {
-    font-weight: bold; /* Bold date */
-    font-size: 1.2em; /* Slightly larger font size */
-    margin-bottom: 10px; /* Space below the date */
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 10px;
 }
 
 .weather-day:hover {
-    transform: scale(1.05); /* Scale up on hover */
+    transform: scale(1.05);
 }
 
 .weather-day span {
-    display: block; /* Stack spans vertically */
-    color: #555; /* Softer text color */
+    display: block;
+    color: #555;
 }
 
 #load-weather {
-    background-color: #007bff; /* Primary button color */
-    color: white; /* White text */
-    border: none; /* No border */
-    padding: 10px 20px; /* Padding around button */
-    border-radius: 5px; /* Rounded button corners */
-    cursor: pointer; /* Pointer cursor on hover */
-    display: block; /* Center the button */
-    margin: 20px auto 0; /* Margin for spacing */
-    transition: background-color 0.3s; /* Smooth color change */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto 0;
+    transition: background-color 0.3s;
 }
 
-#load-weather:hover {
-    background-color: #0056b3; /* Darker shade on hover */
+#load-weather:hover {    background-color: #0056b3;
 }
 
 #noteForm {
@@ -187,7 +185,7 @@ main p {
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    resize: none; /* Prevent resizing the textarea */
+    resize: none;
 }
 
 button {
@@ -203,11 +201,15 @@ button:hover {
     background-color: #45a049;
 }
 
+.note-title {
+    margin-bottom: 10px;
+}
+
 .note {
     background-color: #f9f9f9;
     border: 1px solid #ccc;
     border-radius: 5px;
-    padding: 10px;
+    padding: 14px;
     margin-bottom: 10px;
     position: relative;
 }
@@ -221,4 +223,8 @@ button:hover {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: black;
 }

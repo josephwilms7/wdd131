@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>W3.CSS Template</title>
+    <meta name="description" content="This is a simple dashboard app for myself">
+    <meta name="author" content="Joseph Wiliams">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/style-large.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="scripts/project.js" defer></script>
     <script src="scripts/note.js" defer></script>
 </head>
@@ -22,12 +23,13 @@
     </header>
 
     <main>
-        <h2>Note Taking App</h2>
-        <form id="noteForm">
-            <textarea id="noteInput" placeholder="Write your note here..." required></textarea>
-            <button type="submit">Add Note</button>
+        <h2 class="note-title">Note Taking App</h2>
+        <form id="noteForm" aria-labelledby="noteFormLabel">
+            <label id="noteFormLabel" for="noteInput" class="visually-hidden"></label>
+            <textarea id="noteInput" placeholder="Write your note here..." required aria-required="true"></textarea>
+            <button type="submit" aria-label="Add your note">Add Note</button>
         </form>
-        <div id="notesContainer"></div>
+        <div id="notesContainer" role="region" aria-live="polite" aria-label="Notes List"></div>
     </main>
 
     <footer>
