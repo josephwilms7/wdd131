@@ -79,16 +79,16 @@ main p {
 .row {
     display: flex;
     flex-direction: column;
-    margin: 0;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
     margin-bottom: 30px;
 }
 
-.twothird {
-    flex: 1;
-}
-
-.third {
-    flex: 1;
+.item {
+    flex: 1 1 100%;
+    text-align: center;
 }
 
 .responsive-image {
