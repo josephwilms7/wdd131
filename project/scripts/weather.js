@@ -21,15 +21,14 @@ async function getWeather() {
 
 function displayWeather(data) {
     const weatherDataContainer = document.getElementById('weather-data');
-    weatherDataContainer.innerHTML = ''; // Clear previous data
+    weatherDataContainer.innerHTML = '';
 
     const dailyWeather = {};
 
-    // Group weather data by date
     data.list.forEach(entry => {
         const date = new Date(entry.dt * 1000);
         const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-        const formattedDate = date.toLocaleDateString('en-US', options); // Formatted date
+        const formattedDate = date.toLocaleDateString('en-US', options);
 
         if (!dailyWeather[formattedDate]) {
             dailyWeather[formattedDate] = {
@@ -37,17 +36,16 @@ function displayWeather(data) {
                 conditions: entry.weather[0].description,
                 windSpeed: entry.wind.speed,
                 humidity: entry.main.humidity,
-                count: 1 // Count entries for averaging if needed
+                count: 1
             };
         } else {
             dailyWeather[formattedDate].temp += entry.main.temp;
             dailyWeather[formattedDate].count += 1;
-            dailyWeather[formattedDate].windSpeed += entry.wind.speed; // Accumulate wind speed
-            dailyWeather[formattedDate].humidity += entry.main.humidity; // Accumulate humidity
+            dailyWeather[formattedDate].windSpeed += entry.wind.speed;
+            dailyWeather[formattedDate].humidity += entry.main.humidity;
         }
     });
 
-    // Create an average for each day
     for (const date in dailyWeather) {
         const dailyData = dailyWeather[date];
         const averageTemp = (dailyData.temp / dailyData.count).toFixed(1);
